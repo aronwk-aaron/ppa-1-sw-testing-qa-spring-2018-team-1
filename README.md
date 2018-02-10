@@ -7,16 +7,16 @@ Professional Practice Assignment 1 - Team 1
 ## Getting Started
 We are going to be working with: 
 
-| Program               | Version |
-| --------------------- | :-----: |
-| Windows               | 10      |
-| Python                | 3.6.3   |
-| virtualenvwrapper-win | 1.2.5   |
-| pytest                | 3.4.0   |
-| pytest-html           | 1.16.1  |
+| Program                                                                     | Version |
+| --------------------------------------------------------------------------- | :-----: |
+| [Windows](https://www.microsoft.com/en-us/software-download/windows10)      | 10      |
+| [Python](https://www.python.org/)                                           | 3.6.3   |
+| [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win) | 1.2.5   |
+| [pytest](https://docs.pytest.org/en/latest/)                                | 3.4.0   |
+| [pytest-html](https://pypi.python.org/pypi/pytest-html)                     | 1.16.1  |
 
 ### Install python
-Download [Python 3.6.3](https://www.python.org/ftp/python/3.6.3/python-3.6.4-amd64.exe) and follow the on screen instructions leaving all of the settings as default.
+Download [Python 3.6.3](https://www.python.org/downloads/release/python-363/) and follow the on screen instructions leaving all of the settings as default.
 
 ### Installing and setting up virtualenv and installing requirements
 We will be using a virtual environment to make things a bit easier.  Python 3 ships with 
