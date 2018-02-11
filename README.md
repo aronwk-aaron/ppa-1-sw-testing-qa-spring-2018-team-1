@@ -9,7 +9,7 @@ We are going to be working with:
 
 | Program                                                                     | Version |
 | --------------------------------------------------------------------------- | :-----: |
-| [Windows](https://www.microsoft.com/en-us/software-download/windows10)      | 10      |
+| [Windows](https://www.microsoft.com/en-us/software-download/windows10)      | 10      | 
 | [Python](https://www.python.org/)                                           | 3.6.3   |
 | [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win) | 1.2.5   |
 | [pytest](https://docs.pytest.org/en/latest/)                                | 3.4.0   |
@@ -33,6 +33,9 @@ mkvirtualenv --python=C:\\path\\to\\python3.6\\python.exe -a C:\\path\\to\\ppa-1
 
 ```
 
+All of the requirements to run this project will be installed when you create the new virtual environment using requirements.txt
+
+The virtual environment will automatically activate when you create it.
 
 Reference commands
 ``` bash
@@ -45,8 +48,6 @@ pip install -r requirements.txt
 #leave the virtualenv
 deactivate
 ```
-
-All of the requirements to run this project will be installed when you create the new virtual environment using requirements.txt
 
 ### Running Tests
 
