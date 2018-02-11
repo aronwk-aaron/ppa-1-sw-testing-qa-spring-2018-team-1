@@ -22,10 +22,7 @@ Download [Python 3.6.3](https://www.python.org/downloads/release/python-363/) an
 We will be using a virtual environment to make things a bit easier.  Python 3 ships with 
 support for this (see: `python -m venv -h`), but we are using 
 [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win) rather
-than directly using the module.
-
-**_The following steps assume you have cloned the repo and navigated to the directory that it is located it_**
-
+**_The following steps assume you have cloned the repo using your preferred method of git and navigated to the directory that it is located in_**
 
 ``` bash
 #install virtualenvwrapper-win using pip
@@ -34,11 +31,15 @@ pip install virtualenvwrapper-win
 #make a new virtual environment
 mkvirtualenv --python=C:\\path\\to\\python3.6\\python.exe -a C:\\path\\to\\ppa-1-sw-testing-qa-spring-2018-team-1 -r requirements.txt ppa-1
 
-#Reference commands
+```
+
+
+Reference commands
+``` bash
 #activate the virtualenv
 workon ppa-1
 
-#install requirements
+#updating requirements
 pip install -r requirements.txt
 
 #leave the virtualenv
@@ -49,11 +50,11 @@ All of the requirements to run this project will be installed when you create th
 
 ### Running Tests
 
-To run test and generate a coverage report run the following commands in the root diretory of the repo. 
+Use the following command to run the test suite and generate a coverage report:
 
 ``` bash
-#run test and generate html report
+# in the project root:
 pytest --html=report.html --self-contained-html
 ```
 
-This will automatically discover test according to [pytest's test discovery convention](https://docs.pytest.org/en/latest/goodpractices.html#test-discovery)
+pytest will automatically discover all tests that follow their naming convention (see [here](https://docs.pytest.org/en/latest/goodpractices.html#test-discovery)).
