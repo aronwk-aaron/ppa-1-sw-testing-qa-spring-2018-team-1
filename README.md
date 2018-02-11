@@ -16,13 +16,18 @@ We are going to be working with:
 | [pytest-html](https://pypi.python.org/pypi/pytest-html)                     | 1.16.1  |
 
 ### Install python
-Download [Python 3.6.3](https://www.python.org/downloads/release/python-363/) and follow the on screen instructions leaving all of the settings as default.
+Download [Python 3.6.3](https://www.python.org/downloads/release/python-363/) and follow 
+the on screen instructions leaving all of the settings as default.
 
 ### Installing and setting up virtualenv and installing requirements
 We will be using a virtual environment to make things a bit easier.  Python 3 ships with 
 support for this (see: `python -m venv -h`), but we are using 
-[virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win) rather
-**_The following steps assume you have cloned the repo using your preferred method of git and navigated to the directory that it is located in_**
+[virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win) rather than 
+directly using the venv package.
+
+
+**_The following steps assume you have cloned the repo using your preferred method of git 
+and navigated to the directory that it is located in_**
 
 ``` bash
 #install virtualenvwrapper-win using pip
@@ -33,11 +38,12 @@ mkvirtualenv --python=C:\\path\\to\\python3.6\\python.exe -a C:\\path\\to\\ppa-1
 
 ```
 
-All of the requirements to run this project will be installed when you create the new virtual environment using requirements.txt
+All of the requirements to run this project will be installed when you create the new virtual 
+environment using requirements.txt
 
 The virtual environment will automatically activate when you create it.
 
-Reference commands
+### Reference commands:
 ``` bash
 #activate the virtualenv
 workon ppa-1
@@ -58,4 +64,5 @@ Use the following command to run the test suite and generate a coverage report:
 pytest --html=report.html --self-contained-html
 ```
 
-pytest will automatically discover all tests that follow their naming convention (see [here](https://docs.pytest.org/en/latest/goodpractices.html#test-discovery)).
+pytest will automatically discover all tests that follow their naming convention 
+(see [here](https://docs.pytest.org/en/latest/goodpractices.html#test-discovery)).
