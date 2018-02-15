@@ -63,14 +63,16 @@ def distance_input(): # pragma: no cover
 	print("The shortest distance between the two points is ", dist)
 	print()
 
-def email_input(): # pragma: no cover
-	email = input("Enter your email address: ")
-
-	verify_email(email)
-
 	# output
 
-def tip_input(): # pragma: no cover
+def email_input(): # pragma: no cover
+    email = input("Enter your email address: ")
+    if verify_email(email):
+        print (email," is an email")
+    else:
+        print (email," is not an email")
+
+def tip_input():
 	bill = input("Enter the ammount for the check: ")
 	people = input("Enter the number of people in your party: ")
 
