@@ -1,12 +1,20 @@
 def calc_distance(x1, y1, x2, y2):
 	# checking for non int or float inputs
-	if not(isinstance(x1, (float, int))):
+	try:
+		x1 = float(x1)
+	except:
 		raise ValueError("x1 must be a integer or a float")
-	if not(isinstance(x2, (float, int))):
+	try:
+		x2 = float(x2)
+	except:		
 		raise ValueError("x2 must be a integer or a float")
-	if not(isinstance(y1, (float, int))):
+	try:
+		y1 = float(y1)
+	except:
 		raise ValueError("y1 must be a integer or a float")
-	if not(isinstance(y2, (float, int))):
+	try:
+		y2 = float(y2)
+	except:
 		raise ValueError("y2 must be a integer or a float")
 
 	# if the points are the same

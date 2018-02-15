@@ -38,3 +38,6 @@ def test_distance_large():
 
 def test_distance_negitive():
 	assert calc_distance(-5,-10,1,1) == 12.53
+
+def test_distance_string_num():
+	assert calc_distance("0","0","1","0") == 1
