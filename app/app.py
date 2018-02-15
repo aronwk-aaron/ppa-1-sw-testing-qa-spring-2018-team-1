@@ -4,8 +4,9 @@ os.system('cls') # pragma: no cover
 from distance import calc_distance # pragma: no cover
 from bmi import calc_bmi # pragma: no cover 
 from retirement import retirement  # pragma: no cover 
+from email import verify_email
 
-def main(): # pragma: no cover
+def main():
 	print("Welcome to Team 1's Profesional Practice Project!\n"
 		  "1. Body Mass Index\n"
 		  "2. Retirement\n"
