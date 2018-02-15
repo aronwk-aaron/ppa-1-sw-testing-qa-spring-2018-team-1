@@ -56,12 +56,12 @@ def distance_input():
 
 	# output
 
-def email_input():
-	email = input("Enter your email address: ")
-
-	verify_email(email)
-
-	# output
+def email_input(): # pragma: no cover
+    email = input("Enter your email address: ")
+    if verify_email(email):
+        print (email," is an email")
+    else:
+        print (email," is not an email")
 
 def tip_input():
 	bill = input("Enter the ammount for the check: ")
