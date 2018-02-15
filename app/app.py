@@ -2,6 +2,8 @@ import os
 import sys
 os.system('cls')
 
+from email import verify_email
+
 def main():
 	print("Welcome to Team 1's Profesional Practice Project!\n"
 		  "1. Body Mass Index\n"
