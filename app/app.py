@@ -1,7 +1,9 @@
 import os # pragma: no cover
 import sys # pragma: no cover
 os.system('cls') # pragma: no cover
-from distance import calc_distance
+from distance import calc_distance # pragma: no cover
+from bmi import calc_bmi # pragma: no cover 
+from retirement import retirement  # pragma: no cover 
 
 def main(): # pragma: no cover
 	print("Welcome to Team 1's Profesional Practice Project!\n"
@@ -31,23 +33,27 @@ def main(): # pragma: no cover
 
 
 def BMI_input(): # pragma: no cover
+	print()
 	feet = input("Enter your height (feet): ")
 	inches = input("Height (inches): ")
 	weight = input("Enter your weight in pounds: ")
 
-	# output
+	bmi_status, bmi = calc_bmi(feet, inches, weight)
+	print(bmi_status,": ", bmi)
+	print()
 
 def retirement_input(): # pragma: no cover
 	age = input("Enter your age: ")
 	salary = input("Enter your annual salary: ")
-	precent = input("Enter your precent saved (10% would be 10): ")
+	precent = input("Enter your percent saved (10% would be 10): ")
 	goal = input("Enter your retirement saving goal: ")
 
-	retirement(age, salary, precent, goal)
+	print(retirement(age, salary, precent, goal))
 
 	# output
 
 def distance_input(): # pragma: no cover
+	print()
 	x1 = input("Input your first x point: ")
 	y1 = input("Input your first y point: ")
 	x2 = input("Input your second x point: ")
@@ -55,6 +61,7 @@ def distance_input(): # pragma: no cover
 
 	dist = calc_distance(x1, y1, x2, y2)
 	print("The shortest distance between the two points is ", dist)
+	print()
 
 def email_input(): # pragma: no cover
 	email = input("Enter your email address: ")
