@@ -13,7 +13,7 @@ We are going to be working with:
 | [Python](https://www.python.org/)                                           | 3.6.3   |
 | [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win) | 1.2.5   |
 | [pytest](https://docs.pytest.org/en/latest/)                                | 3.4.0   |
-| [pytest-html](https://pypi.python.org/pypi/pytest-html)                     | 1.16.1  |
+| [coverage](https://pypi.python.org/pypi/coverage)                     | 4.5.1  |
 
 ### Install python
 Download [Python 3.6.3](https://www.python.org/downloads/release/python-363/) and follow 
