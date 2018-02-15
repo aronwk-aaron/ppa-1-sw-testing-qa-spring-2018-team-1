@@ -73,7 +73,7 @@ To generate a coverage report:
 
 ``` bash
 # in the project root
-coverate run --source app -m py.test
+coverage run --source app -m py.test
 
 coverage report
 ```
