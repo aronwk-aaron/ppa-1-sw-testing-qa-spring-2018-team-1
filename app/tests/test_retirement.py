@@ -36,5 +36,8 @@ def test_InvalidGoalValueRaisesValueError():
 	with pytest.raises(ValueError):
 		retirement(50, 50000.00, 35.0, -75.00)
 
-def test_RetirementOutput():
+def test_RetirementOutputIfGoalMet():
 	assert isinstance(retirement(50, 50000.00, 35.0, 1000000.00), str)
+
+def test_RetirementOutputIfGoalNotMet():
+	assert isinstance(retirement(50, 50000.00, 35.0, 10000000000000000.00), str)
