@@ -19,13 +19,13 @@ def test_email_with_ending_period():
 def test_email_with_two_periods():
 	assert verify_email("na..me@email.com") == False
 
-def test_email_starting_with number():
+def test_email_starting_with_number():
 	assert verify_email("1name@email.com") == False
 
 def test_email_with_symbols():
 	assert verify_email("!$%*+-=?^_{|}~@email.com") == True
 
-def test_email_with_sub domain():
+def test_email_with_sub_domain():
 	assert verify_email("!$%*+-=?^_{|}~@email.org.us") == True
 
 def test_email_with_no_at_or_domain():
