@@ -61,8 +61,24 @@ Use the following command to run the test suite and generate a coverage report:
 
 ``` bash
 # in the project root:
-pytest --html=report.html --self-contained-html
+pytest --pyargs app
 ```
 
 pytest will automatically discover all tests that follow their naming convention 
 (see [here](https://docs.pytest.org/en/latest/goodpractices.html#test-discovery)).
+
+### Coverage Reporting
+
+To generate a coverage report:
+
+``` bash
+# in the project root
+coverate run --source app -m py.test
+
+coverage report
+```
+ 
+Optionally, you can generate an HTML report using the following command:
+``` bash
+coverage html
+```
