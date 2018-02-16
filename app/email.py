@@ -8,7 +8,7 @@ import re
 
 
 def verify_email(email):
-    regex = r"^[a-zA-Z!$%*+\-=?^_{|}~]+((\.[\w!$%*+\-=?^_{|}~]+)+|[\w!$%*+\-=?^_{|}~])@(([a-zA-Z0-9]+\.)+)[a-zA-Z]{2,5}$"
+    regex = r"^[a-zA-Z!$%*+\-=?^_{|}~]+(((\.[\w!$%*+\-=?^_{|}~]+)+|[\w!$%*+\-=?^_{|}~])+)@(([a-zA-Z0-9]+\.)+)[a-zA-Z]{2,5}$"
     is_email = re.fullmatch(regex,email)
     if is_email:
         return True
