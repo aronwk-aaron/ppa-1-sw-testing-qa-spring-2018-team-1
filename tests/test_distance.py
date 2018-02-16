@@ -1,4 +1,4 @@
-from distance import calc_distance
+from app.distance import calc_distance
 import pytest
 
 def test_distance_same():

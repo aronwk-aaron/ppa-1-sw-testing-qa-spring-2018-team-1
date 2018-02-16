@@ -1,7 +1,7 @@
 #William Thompson (wtt53)
 #Tests for retirement functionality
 
-from retirement import *
+from app.retirement import retirement
 import pytest
 
 def test_InvalidAgeTypeRaisesValueError():
