@@ -1,4 +1,4 @@
-from tip import split_tip
+from app.tip import split_tip
 import pytest
 
 def test_float_tip_and_integer_guest():
