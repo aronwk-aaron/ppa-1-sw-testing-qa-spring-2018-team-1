@@ -4,6 +4,7 @@ os.system('cls') # pragma: no cover
 from distance import calc_distance # pragma: no cover
 from bmi import calc_bmi # pragma: no cover 
 from retirement import retirement  # pragma: no cover 
+from email import verify_email # pragma: no cover 
 
 def main(): # pragma: no cover
 	print("Welcome to Team 1's Profesional Practice Project!\n"
@@ -64,16 +65,20 @@ def distance_input(): # pragma: no cover
 	print()
 
 def email_input(): # pragma: no cover
-	email = input("Enter your email address: ")
-
-	verify_email(email)
-
-	# output
+	print()
+	email = input("Enter your email address: ") 
+	if verify_email(email):
+		print (email," is an email") 
+	else: 
+		print (email," is not an email")
+	print() 
 
 def tip_input(): # pragma: no cover
+	print()
 	bill = input("Enter the ammount for the check: ")
 	people = input("Enter the number of people in your party: ")
 
 	# output
+	print()
 
 main() # pragma: no cover
