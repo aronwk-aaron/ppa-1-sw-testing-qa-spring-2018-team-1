@@ -84,6 +84,7 @@ def tip_input(): # pragma: no cover
     i = 1
     for each in payment_list:
         print("guest ", i, " pays ", each, "\n")
+        i=i+1
     print()
 
 
