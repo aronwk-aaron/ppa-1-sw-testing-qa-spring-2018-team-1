@@ -3,6 +3,7 @@ import sys # pragma: no cover
 os.system('cls') # pragma: no cover
 from email import verify_email # pragma: no cover
 
+
 def main():
 	print("Welcome to Team 1's Profesional Practice Project!\n"
 		  "1. Body Mass Index\n"
