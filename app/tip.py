@@ -1,13 +1,24 @@
 def split_tip(tip, guest_count):
-    if not (isinstance(tip, (float))):
+    try:
+        float(tip)
+    except Exception as e:
         return False
-    if not (isinstance(guest_count, (int))):
+    try :
+        int(guest_count)
+    except Exception as e:
         return False
 
-    if ((tip == 0) or (guest_count == 0)):
+    if ((float(tip) == 0) \
+    or (int(guest_count) == 0))\
+    or (float(tip) == round(float(tip)))\
+    or ((float(guest_count)) != round(float(guest_count))):
         return False
 
+    if float(tip) == round(float(tip)):
+        return False
     else:
+        guest_count = int(guest_count)
+        tip = float(tip)
         tip_split_var = tip / guest_count
         guest_array = [round(tip_split_var, 2)]
         total = tip - guest_array[0]
