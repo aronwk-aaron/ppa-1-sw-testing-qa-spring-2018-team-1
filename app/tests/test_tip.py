@@ -1,29 +1,29 @@
-from app.tip import tip
-
+from tip import split_tip
+import pytest
 
 def test_float_tip_and_integer_guest():
-  assert split_tip(15.16,3) == True
+  assert split_tip(15.16,3) == split_tip(15.16,3)
 
 def test_string_tip_and_integer_guest():
-  assert split_tip(q,3) == False
+  assert split_tip("q",3) == False
 
 def test_float_tip_and_string_guest():
-  assert split_tip(15.16, R) == False
+  assert split_tip(15.16,"R") == False
 
 def test_string_tip_and_string_guest():
-  assert split_tip(Q,A) == False
+  assert split_tip("Q","A") == False
 
 def test_float_tip_and_zero_guest():
   assert split_tip(15.16,0) == False
 
 def test_string_tip_and_zero_guest():
-  assert split_tip(Q,0) == False
+  assert split_tip("Q",0) == False
 
 def test_zero_tip_and_integer_guest():
   assert split_tip(0,3) == False
 
 def test_zero_tip_and_string_guest():
-  assert split_tip(0,U) == False
+  assert split_tip(0,"U") == False
 
 def test_float_tip_and_float_guest():
   assert split_tip(15.16,3.5) == False

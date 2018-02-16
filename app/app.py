@@ -66,7 +66,8 @@ def email_input():
 def tip_input():
 	bill = input("Enter the ammount for the check: ")
 	people = input("Enter the number of people in your party: ")
-
+	
+	split_tip(bill,people)
 	# output
 
 main()
