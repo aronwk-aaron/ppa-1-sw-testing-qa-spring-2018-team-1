@@ -1,5 +1,4 @@
-from email import verify_email
-
+from app.email import verify_email
 
 def test_basic_email_text_only():
 	assert verify_email("name@email.com") == True
