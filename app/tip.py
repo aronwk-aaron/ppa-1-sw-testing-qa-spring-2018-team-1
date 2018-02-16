@@ -1,4 +1,13 @@
+#Jahrell Harris netID: jah1254
+#Software Testing Q&A
+#Spliting Tip amount among guest is what this code's functionality is
+#It accepts only a float value as the tip amount and only an integer value as the guest amount
+#Retruns False when the conditions above are violated and also when any value is 0 for either guest or tip
+
+#Function for splitting tips accepts (float,int)
 def split_tip(tip, guest_count):
+
+	#Ensures that given input matches desired input(input does not violate accepted data types)
     try:
         float(tip)
     except Exception as e:
@@ -16,6 +25,8 @@ def split_tip(tip, guest_count):
 
     if float(tip) == round(float(tip)):
         return False
+
+	#If given valid input calculates tip values for each guest rounded to 2 decimal places
     else:
         guest_count = int(guest_count)
         tip = float(tip)
