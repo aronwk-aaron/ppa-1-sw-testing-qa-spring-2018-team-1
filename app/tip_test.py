@@ -2,17 +2,12 @@ import pytest
 
 
 def split_tip(tip, guest):
-    if not (isinstance(tip, (float))):
-        raise ValueError("Your tip must be a float value")
+    if not (isinstance(tip, (float, int))):
+        raise ValueError("x1 must be a integer or a float")
     if not (isinstance(guest, (int))):
-        raise ValueError("Your guest must be an integer")
+        raise ValueError("x2 must be a integer or a float")
 
-    if (tip == 0):
-        print("Tip value cannot be 0")
-        return 0
-
-    elif (guest == 0):
-        print("Cannot have 0 guest")
+    if ((tip == 0) or (guest == 0)):
         return 0
 
     else:
