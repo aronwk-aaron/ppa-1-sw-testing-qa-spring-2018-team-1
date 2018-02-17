@@ -18,6 +18,7 @@ def main(): # pragma: no cover
 	while True:
 		choice = input("Please enter the number of what you would like to do: ")
 
+		print()
 		if (choice == "1"):
 			BMI_input()
 		elif (choice == "2"):
@@ -29,33 +30,38 @@ def main(): # pragma: no cover
 		elif (choice == "5"):
 			tip_input()
 		elif (choice == "6"):
+			
 			sys.exit("Exiting Program")
 		else:
 			print("Invalid input.")
+		print()
+			
 
 
 def BMI_input(): # pragma: no cover
-	print()
+	
 	feet = input("Enter your height (feet): ")
 	inches = input("Height (inches): ")
 	weight = input("Enter your weight in pounds: ")
 
 	bmi_status, bmi = calc_bmi(feet, inches, weight)
 	print(bmi_status,": ", bmi)
-	print()
+	
 
 def retirement_input(): # pragma: no cover
+	
 	age = input("Enter your age: ")
 	salary = input("Enter your annual salary: ")
 	precent = input("Enter your percent saved (10% would be 10): ")
 	goal = input("Enter your retirement saving goal: ")
 
 	print(retirement(age, salary, precent, goal))
+	
 
 	# output
 
 def distance_input(): # pragma: no cover
-	print()
+	
 	x1 = input("Input your first x point: ")
 	y1 = input("Input your first y point: ")
 	x2 = input("Input your second x point: ")
@@ -66,33 +72,29 @@ def distance_input(): # pragma: no cover
 		print("Invalid Input")
 	else:
 		print("The shortest distance between the two points is ", dist)
-	print()
+	
 
 def email_input(): # pragma: no cover
-	print()
+	
 	email = input("Enter your email address: ") 
+
 	if verify_email(email):
 		print (email," is an email") 
 	else: 
 		print (email," is not an email")
-	print() 
+	 
 
 def tip_input(): # pragma: no cover
-    print()
+    
     bill = input("Enter the ammount for the check: ")
     people = input("Enter the number of people in your party: ")
     
     payment_list = split_tip(bill, people)
     if payment_list == False:
         print("invalid input")
-        print()
-        return
-
     i = 1
     for each in payment_list:
-        print("guest ", i, " pays ", each, "\n")
+        print("Guest", i, "pays", each)
         i=i+1
-    print()
-
-
+    
 main() # pragma: no cover
