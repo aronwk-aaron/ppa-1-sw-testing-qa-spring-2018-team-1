@@ -1,6 +1,7 @@
 import os # pragma: no cover
 import sys # pragma: no cover
 os.system('cls') # pragma: no cover
+from tip import split_tip # pragma: no cover
 from distance import calc_distance # pragma: no cover
 from bmi import calc_bmi # pragma: no cover 
 from retirement import retirement  # pragma: no cover 
@@ -74,11 +75,21 @@ def email_input(): # pragma: no cover
 	print() 
 
 def tip_input(): # pragma: no cover
-	print()
-	bill = input("Enter the ammount for the check: ")
-	people = input("Enter the number of people in your party: ")
+    print()
+    bill = input("Enter the ammount for the check: ")
+    people = input("Enter the number of people in your party: ")
+    
+    payment_list = split_tip(bill, people)
+    if payment_list == False:
+        print("invalid input")
+        print()
+        return
 
-	# output
-	print()
+    i = 1
+    for each in payment_list:
+        print("guest ", i, " pays ", each, "\n")
+        i=i+1
+    print()
+
 
 main() # pragma: no cover
