@@ -39,13 +39,13 @@ def retirement(age, salary, percent, goal):
 	if goal <= 0:
 		return (False)
 
-	rawAnnualSavings = salary * (percent / 100)
-	annualSavings = rawAnnualSavings + (rawAnnualSavings * 0.35)
-	currentSavings = 0.00
+	rawAnnualSavings = salary * (percent / 100) #savings from salary without employer's 35%
+	annualSavings = rawAnnualSavings + (rawAnnualSavings * 0.35) #total annual savings including employer's 35%
+	currentSavings = 0.00 #total savings so far
 
-	for i in range (age, 100):
+	for i in range (age, 100): #add annual savings to total savings for each year until age 100
 		currentSavings += annualSavings
 		if currentSavings >= goal:
 			return("You will meet your savings goal at age "+str(i))
 
-	return("Sorry, your goal won't be met.")
+	return("Sorry, your goal won't be met.") #Notify user if they will not meet their goal
