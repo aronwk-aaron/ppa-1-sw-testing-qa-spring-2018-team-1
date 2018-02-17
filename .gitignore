@@ -42,7 +42,7 @@ pip-log.txt
 pip-delete-this-directory.txt
 
 # Unit test / coverage reports
-htmlcov/
+# htmlcov/
 .tox/
 .coverage
 .coverage.*
@@ -106,7 +106,6 @@ venv.bak/
 
 #extra
 assets/
-*.html
 
 
 # End of https://www.gitignore.io/api/pydev,python
