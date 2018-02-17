@@ -7,22 +7,37 @@
 
 def retirement(age, salary, percent, goal):
 
-	age = int(age) #cast each variable as its proper data type
-	salary = float(salary)
-	percent = float(percent)
-	goal = float(goal)
+	try: #cast each variable as its proper data type
+		age = int(age)
+	except:
+		return (False)
+
+	try:
+		salary = float(salary)
+	except:
+		return (False)
+
+	try:
+		percent = float(percent)
+	except:
+		return (False)
+
+	try:
+		goal = float(goal)
+	except:
+		return (False)
 
 	if age < 15 or age > 99: #check each value to make sure it is in the proper range
-		raise(ValueError("Age must be between 15 and 99"))
+		return (False)
 
 	if salary <= 0:
-		raise(ValueError("Salary must be greater than 0"))
+		return (False)
 
 	if percent <= 0:
-		raise(ValueError("Percent saved must be greater than 0"))
+		return (False)
 
 	if goal <= 0:
-		raise(ValueError("Goal must be greater than 0"))
+		return (False)
 
 	rawAnnualSavings = salary * (percent / 100)
 	annualSavings = rawAnnualSavings + (rawAnnualSavings * 0.35)
