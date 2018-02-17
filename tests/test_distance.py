@@ -1,5 +1,4 @@
 from app.distance import calc_distance
-import pytest
 
 def test_distance_same():
 	assert calc_distance(1,1,1,1) == 0
@@ -18,26 +17,19 @@ def test_distance_is_float():
 	assert test_is_float == True
 
 def test_distance_word_x1():
-	with pytest.raises(ValueError):
-		calc_distance("word",1,2,3)
+	assert calc_distance("word",1,2,3) == False
 
 def test_distance_word_x2():
-	with pytest.raises(ValueError):
-		calc_distance(1,2,"word",3)
+	assert calc_distance(1,2,"word",3) == False
 
 def test_distance_word_y1():
-	with pytest.raises(ValueError):
-		calc_distance(1,"word",2,3)
+	assert calc_distance(1,"word",2,3) == False
 
 def test_distance_word_y2():
-	with pytest.raises(ValueError):
-		calc_distance(1,2,3,"word")
+	assert calc_distance(1,2,3,"word") == False
 
 def test_distance_large():
 	assert calc_distance(10000000,0,-1000000,5555555) == 12323319.0074
 
 def test_distance_negitive():
 	assert calc_distance(-5,-10,1,1) == 12.53
-
-def test_distance_string_num():
-	assert calc_distance("0","0","1","0") == 1
