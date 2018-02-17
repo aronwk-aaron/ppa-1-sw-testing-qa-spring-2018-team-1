@@ -62,7 +62,10 @@ def distance_input(): # pragma: no cover
 	y2 = input("Input your second y point: ")
 
 	dist = calc_distance(x1, y1, x2, y2)
-	print("The shortest distance between the two points is ", dist)
+	if dist == False:
+		print("Invalid Input")
+	else:
+		print("The shortest distance between the two points is ", dist)
 	print()
 
 def email_input(): # pragma: no cover
