@@ -13,7 +13,7 @@ We are going to be working with:
 | [Python](https://www.python.org/)                                           | 3.6.3   |
 | [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win) | 1.2.5   |
 | [pytest](https://docs.pytest.org/en/latest/)                                | 3.4.0   |
-| [pytest-html](https://pypi.python.org/pypi/pytest-html)                     | 1.16.1  |
+| [coverage](https://pypi.python.org/pypi/coverage)                     | 4.5.1  |
 
 ### Install python
 Download [Python 3.6.3](https://www.python.org/downloads/release/python-363/) and follow 
@@ -61,8 +61,24 @@ Use the following command to run the test suite and generate a coverage report:
 
 ``` bash
 # in the project root:
-pytest --html=report.html --self-contained-html
+pytest --pyargs app
 ```
 
 pytest will automatically discover all tests that follow their naming convention 
 (see [here](https://docs.pytest.org/en/latest/goodpractices.html#test-discovery)).
+
+### Coverage Reporting
+
+To generate a coverage report:
+
+``` bash
+# in the project root
+coverage run --source app -m py.test
+
+coverage report
+```
+ 
+Optionally, you can generate an HTML report using the following command:
+``` bash
+coverage html
+```
