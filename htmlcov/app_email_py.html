@@ -96,8 +96,8 @@
 <p id="t8" class="pln"><span class="strut">&nbsp;</span></p>
 <p id="t9" class="pln"><span class="strut">&nbsp;</span></p>
 <p id="t10" class="stm run hide_run"><span class="key">def</span> <span class="nam">verify_email</span><span class="op">(</span><span class="nam">email</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
-<p id="t11" class="stm run hide_run">    <span class="nam">regex</span> <span class="op">=</span> <span class="str">r"^[a-zA-Z!$%*+\-=?^_{|}~]+(((\.[\w!$%*+\-=?^_{|}~]+)+|[\w!$%*+\-=?^_{|}~])+)@(([a-zA-Z0-9]+\.)+)[a-zA-Z]{2,5}$"</span><span class="strut">&nbsp;</span></p>
-<p id="t12" class="stm run hide_run">    <span class="nam">is_email</span> <span class="op">=</span> <span class="nam">re</span><span class="op">.</span><span class="nam">fullmatch</span><span class="op">(</span><span class="nam">regex</span><span class="op">,</span><span class="nam">email</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
+<p id="t11" class="stm run hide_run">    <span class="nam">regex</span> <span class="op">=</span> <span class="str">r"^[a-zA-Z!$%*+\-=?^_{|}~]+(((\.[\w!$%*+\-=?^_{|}~]+)+|[\w!$%*+\-=?^_{|}~])+)@((?=[a-z0-9-]{1,63}\.)(xn--)?[a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]{2,63}$"</span><span class="strut">&nbsp;</span></p>
+<p id="t12" class="stm run hide_run">    <span class="nam">is_email</span> <span class="op">=</span> <span class="nam">re</span><span class="op">.</span><span class="nam">fullmatch</span><span class="op">(</span><span class="nam">regex</span><span class="op">,</span> <span class="nam">email</span><span class="op">,</span> <span class="nam">re</span><span class="op">.</span><span class="nam">IGNORECASE</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
 <p id="t13" class="stm run hide_run">    <span class="key">if</span> <span class="nam">is_email</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
 <p id="t14" class="stm run hide_run">        <span class="key">return</span> <span class="key">True</span><span class="strut">&nbsp;</span></p>
 <p id="t15" class="pln">    <span class="key">else</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
@@ -112,7 +112,7 @@
     <div class="content">
         <p>
             <a class="nav" href="index.html">&#xab; index</a> &nbsp; &nbsp; <a class="nav" href="https://coverage.readthedocs.io">coverage.py v4.5.1</a>,
-            created at 2018-02-16 19:21
+            created at 2018-02-18 11:13
         </p>
     </div>
 </div>
